@@ -2,7 +2,7 @@
 name = "bat-ads"
 version = "0.1.0"
 description = ""
-authors = ["ddot-bit <dpuducay@gmail.com>"]
+authors = ["ddot-bit"]
 readme = "README.md"
 packages = [{include = "bat_ads"}]
 
