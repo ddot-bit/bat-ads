@@ -1,4 +1,6 @@
 import pyautogui
+import subprocess
+import time
 
 screenWidth, screenHeight = pyautogui.size() # Returns two integers, the width and height of the screen. (The primary monitor, in multi-monitor setups.)
 currentMouseX, currentMouseY = pyautogui.position() # Returns two integers, the x and y of the mouse cursor's current position.
@@ -14,3 +16,11 @@ pyautogui.keyDown('shift')
 pyautogui.write(['left', 'left', 'left', 'left', 'left', 'left'])
 pyautogui.keyUp('shift')
 pyautogui.hotkey('ctrl', 'c')
+ 
+# From Python3.7 you can add
+# keyword argument capture_output
+print(subprocess.run(["open", "-a", "Messages"],
+                     capture_output=True))
+time.sleep(2)
+print(subprocess.run(["pkill", "-x", "Messages"],
+                     capture_output=True))
